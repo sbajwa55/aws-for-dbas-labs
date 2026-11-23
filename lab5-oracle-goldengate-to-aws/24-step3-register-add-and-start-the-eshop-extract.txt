@@ -1,0 +1,16 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Step 3 — Configure and start Extract
+-- Block: Register, add and start the ESHOP Extract
+-- Book: Register, add, and start Extract:
+--
+-- GoldenGate Admin Client commands. Each command must be entered on ONE line;
+-- the book wraps long commands for the page, this file does not. Paste the
+-- commands below one at a time at the Admin Client prompt.
+-- ----------------------------------------------------------------------
+
+REGISTER EXTRACT ESHOP DATABASE
+ADD EXTRACT ESHOP, INTEGRATED TRANLOG, BEGIN NOW
+ADD EXTTRAIL es, EXTRACT ESHOP
+START EXTRACT ESHOP
+INFO EXTRACT ESHOP, DETAIL

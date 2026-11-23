@@ -1,0 +1,14 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Step 5 — Configure and start Replicat
+-- Block: Write the Replicat parameters, then add and start Replicat
+-- EDIT PARAMS RSHOP:
+--
+-- GoldenGate Admin Client commands. Each command must be entered on ONE line;
+-- the book wraps long commands for the page, this file does not. Paste the
+-- commands below one at a time at the Admin Client prompt.
+-- ----------------------------------------------------------------------
+
+ADD REPLICAT RSHOP, EXTTRAIL es, CHECKPOINTTABLE ggadmin.gg_checkpoint
+START REPLICAT RSHOP, AFTERCSN <SCN>
+INFO REPLICAT RSHOP, DETAIL

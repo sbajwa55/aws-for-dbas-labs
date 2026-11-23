@@ -1,0 +1,13 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Step 5 — Configure and start Replicat
+-- Block: Log in to the target and add the checkpoint table
+-- Run on: lenovaonprem1, in the Admin Client.
+--
+-- GoldenGate Admin Client commands. Each command must be entered on ONE line;
+-- the book wraps long commands for the page, this file does not. Paste the
+-- commands below one at a time at the Admin Client prompt.
+-- ----------------------------------------------------------------------
+
+DBLOGIN USERIDALIAS tgt_pdb DOMAIN OracleGoldenGate
+ADD CHECKPOINTTABLE ggadmin.gg_checkpoint

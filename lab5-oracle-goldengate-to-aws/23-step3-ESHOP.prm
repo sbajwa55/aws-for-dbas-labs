@@ -1,0 +1,15 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Step 3 — Configure and start Extract
+-- Block: Write the Extract parameter file (EDIT PARAMS ESHOP)
+-- EDIT PARAMS ESHOP:
+-- Enter with: EDIT PARAMS ESHOP
+--
+-- GoldenGate parameter file. In the Admin Client run EDIT PARAMS (name),
+-- replace the editor contents with the lines below, save and exit.
+-- ----------------------------------------------------------------------
+
+EXTRACT ESHOP
+USERIDALIAS src_pdb DOMAIN OracleGoldenGate
+EXTTRAIL es
+TABLE shop.*;

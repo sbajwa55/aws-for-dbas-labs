@@ -1,0 +1,14 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Step 6 — Test ongoing replication
+-- Block: Check Extract and Replicat statistics and lag
+-- In the Admin Client:
+--
+-- GoldenGate Admin Client commands. Each command must be entered on ONE line;
+-- the book wraps long commands for the page, this file does not. Paste the
+-- commands below one at a time at the Admin Client prompt.
+-- ----------------------------------------------------------------------
+
+STATS EXTRACT ESHOP, LATEST
+STATS REPLICAT RSHOP, LATEST
+LAG REPLICAT RSHOP

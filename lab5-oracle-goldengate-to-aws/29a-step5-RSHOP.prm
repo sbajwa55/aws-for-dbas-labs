@@ -1,0 +1,14 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Step 5 — Configure and start Replicat
+-- Block: Write the Replicat parameters, then add and start Replicat
+-- EDIT PARAMS RSHOP:
+-- Enter with: EDIT PARAMS RSHOP
+--
+-- GoldenGate parameter file. In the Admin Client run EDIT PARAMS (name),
+-- replace the editor contents with the lines below, save and exit.
+-- ----------------------------------------------------------------------
+
+REPLICAT RSHOP
+USERIDALIAS tgt_pdb DOMAIN OracleGoldenGate
+MAP shop.*, TARGET shop.*;

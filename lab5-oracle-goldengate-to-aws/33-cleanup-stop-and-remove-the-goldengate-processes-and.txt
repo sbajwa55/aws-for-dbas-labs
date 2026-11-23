@@ -1,0 +1,20 @@
+-- AWS for Database Administrators — downloadable lab code
+-- Lab 5 — Oracle GoldenGate to AWS
+-- Cleanup
+-- Block: Stop and remove the GoldenGate processes and credentials
+-- Run on: lenovaonprem1, in the Admin Client.
+--
+-- GoldenGate Admin Client commands. Each command must be entered on ONE line;
+-- the book wraps long commands for the page, this file does not. Paste the
+-- commands below one at a time at the Admin Client prompt.
+-- ----------------------------------------------------------------------
+
+STOP REPLICAT RSHOP
+STOP EXTRACT ESHOP
+DBLOGIN USERIDALIAS tgt_pdb DOMAIN OracleGoldenGate
+DELETE REPLICAT RSHOP
+DBLOGIN USERIDALIAS src_pdb DOMAIN OracleGoldenGate
+UNREGISTER EXTRACT ESHOP DATABASE
+DELETE EXTRACT ESHOP
+DELETE SCHEMATRANDATA shop
+ALTER CREDENTIALSTORE DELETE USER ggadmin ALIAS tgt_pdb DOMAIN OracleGoldenGate
